@@ -88,19 +88,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const light = document.getElementById("light");
   const toggleBtn = document.getElementById("lightToggle");
 
-  let isOn = false; // Biến để theo dõi trạng thái đèn
+  let isOn = true; // Biến để theo dõi trạng thái đèn
 
   // Hàm để thay đổi trạng thái đèn và nút bật/tắt
   function toggleLight() {
     isOn = !isOn; // Đảo ngược trạng thái
     if (isOn) {
       light.src = "img/light-on.png";
-      toggleBtn.innerText = "OFF";
-      toggleBtn.classList.remove("active");
-    } else {
-      light.src = "img/light-off.png";
       toggleBtn.innerText = "ON";
       toggleBtn.classList.add("active");
+    } else {
+      light.src = "img/light-off.png";
+      toggleBtn.innerText = "OFF";
+      toggleBtn.classList.remove("active");
     }
   }
 
@@ -119,15 +119,75 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (isOn) {
       fan.style.animationPlayState = "running"; // Quay quạt khi bật
-      toggleBtn.innerText = "OFF";
-      toggleBtn.classList.remove("active");
-    } else {
-      fan.style.animationPlayState = "paused"; // Dừng quạt khi tắt
       toggleBtn.innerText = "ON";
       toggleBtn.classList.add("active");
+    } else {
+      fan.style.animationPlayState = "paused"; // Dừng quạt khi tắt
+      toggleBtn.innerText = "OFF";
+      toggleBtn.classList.remove("active");
     }
   }
 
   // Xử lý sự kiện click trên nút bật/tắt
   toggleBtn.addEventListener("click", toggleFan);
 });
+
+//Change Background
+
+var temperatureCard = document.getElementById("temperatureCard");
+var temperature = document.getElementById("temperatureValue");
+var temperatureValue = parseInt(temperature.innerHTML);
+
+var humidityCard = document.getElementById("humidityCard");
+var humidity = document.getElementById("humidityValue");
+var humidityValue = parseInt(humidity.innerHTML);
+
+var brightnessCard = document.getElementById("brightnessCard");
+var brightness = document.getElementById("brightnessValue");
+var brightnessValue = parseInt(brightness.innerHTML);
+
+changeBackground(
+  temperatureCard,
+  temperatureValue,
+  32,
+  22,
+  "linear-gradient(to bottom, #FF0000, #FFFF00)",
+  "linear-gradient(to bottom, #F0DE4D, #F0B64D)",
+  "linear-gradient(to bottom, #00FFFF, #0000FF)"
+);
+changeBackground(
+  humidityCard,
+  humidityValue,
+  80,
+  40,
+  "linear-gradient(to bottom, #075EAA, #010F79)",
+  "linear-gradient(to bottom, #4DCFF0, #0E30F0)",
+  "linear-gradient(to bottom, #4DCFF0, #4D9BF0)"
+);
+changeBackground(
+  brightnessCard,
+  brightnessValue,
+  400,
+  100,
+  "linear-gradient(to bottom, #FBFF00, #FFE100)",
+  "linear-gradient(to bottom, #D9BF00, #FBFF00)",
+  "linear-gradient(to bottom, #D9BF00, #9B9E00)"
+);
+
+function changeBackground(
+  box,
+  value,
+  maxValue,
+  minValue,
+  color1,
+  color2,
+  color3
+) {
+  if (value >= maxValue) {
+    box.style.background = color1;
+  } else if (value >= minValue && value < maxValue) {
+    box.style.background = color2;
+  } else if (value < minValue) {
+    box.style.background = color3;
+  }
+}

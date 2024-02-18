@@ -34,3 +34,31 @@ th {
   margin-right: 3rem;
   font-size: 2rem;
 }
+
+.search {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.search input {
+  width: 90%;
+  height: 3rem;
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+}
+
+.search button {
+  width: 7rem;
+  height: 3rem;
+  font-size: 2rem;
+  margin-top: 5rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  background-color: #ffa2a2;
+}
