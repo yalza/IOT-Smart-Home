@@ -1,0 +1,25 @@
+.profile-container {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10rem;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.profile-container img {
+  width: 50rem;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 3.4rem;
+}
+
+.information p {
+  line-height: 8rem;
+}

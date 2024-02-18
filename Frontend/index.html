@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart home</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <nav>
+      <button><a href="index.html">DASHBOARD</a></button>
+      <button><a href="datasensor.html">DATA SENSOR</a></button>
+      <button><a href="actionhistory.html">ACTION HISTORY</a></button>
+      <button><a href="profile.html">PROFILE</a></button>
+    </nav>
+    <div class="container">
+      <div class="parameters">
+        <div class="temparature">
+          <div class="value">
+            <span>25 &deg;C</span>
+            <img src="img/temperature-control.png" alt="" />
+          </div>
+          <p>TEMPARATURE</p>
+        </div>
+        <div class="humidity">
+          <div class="value">
+            <span>25 %</span>
+            <img src="img/humidity.png" alt="" />
+          </div>
+          <p>HUMIDITY</p>
+        </div>
+        <div class="brightness">
+          <div class="value">
+            <span>2500 Lux</span>
+            <img src="img/day-mode.png" alt="" />
+          </div>
+          <p>BRIGHTNESS</p>
+        </div>
+      </div>
+      <div class="content">
+        <div class="chart">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="action">
+          <div class="light">
+            <img id="light" src="img/light-on.png" alt="" />
+
+            <button id="lightToggle">OFF</button>
+          </div>
+          <div class="fan">
+            <img id="fan" src="img/fan.png" alt="" />
+            <button id="fanToggle">OFF</button>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="js/index.js"></script>
+    </div>
+  </body>
+</html>

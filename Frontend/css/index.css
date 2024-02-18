@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #caf6e8;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 12vh;
+  background-color: #f2f2f2;
+  padding: 0 10%;
+}
+
+nav button {
+  width: 25rem;
+  padding: 2rem 0rem;
+  font-size: 2.1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  background-color: #ffa2a2;
+}
+
+nav button:hover {
+  background-color: #82ff7b;
+  color: white;
+  cursor: pointer;
+}
+
+.container .parameters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 12vh;
+  padding: 0 10%;
+  margin-top: 3rem;
+}
+
+.container .parameters img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.container .parameters span {
+  margin-right: 1rem;
+  width: 8rem;
+  font-size: 2.3rem;
+  text-align: center;
+}
+
+.temparature,
+.humidity,
+.brightness {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-color: white;
+  width: 35rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 10rem;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.temparature > div,
+.humidity > div,
+.brightness > div {
+  margin-top: 1rem;
+}
+
+.temparature > p,
+.humidity > p,
+.brightness > p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 19rem;
+}
+
+.chart {
+  width: 70%;
+  height: 60rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.action {
+  width: 23%;
+  height: 60rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.light,
+.fan {
+  width: 25rem;
+  height: 25rem;
+  background: hsl(189, 84%, 80%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.light button,
+.fan button {
+  width: 15rem;
+  padding: 1rem 0rem;
+  font-size: 2.1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  background-color: #ffa2a2;
+}
+
+.action img {
+  width: 15rem;
+}
+
+#myChart {
+  margin-top: 2rem;
+}
+
+.active {
+  background-color: #82ff7b !important;
+}
+
+#fan {
+  animation: spin 1s linear infinite; /* Sử dụng animation để tạo hiệu ứng quay liên tục */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

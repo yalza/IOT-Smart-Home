@@ -1,0 +1,36 @@
+.table-container {
+  margin: 20px;
+}
+
+table {
+  margin-top: 5rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  border-collapse: collapse;
+  font-size: 2rem;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  height: 5rem;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+.page-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+.page-numbers button {
+  width: 7rem;
+  height: 7rem;
+  margin-right: 3rem;
+  font-size: 2rem;
+}
