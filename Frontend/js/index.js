@@ -1,3 +1,7 @@
+let temperatureVl;
+let humidityVl;
+let brightnessVl;
+
 document.addEventListener("DOMContentLoaded", function () {
   var ctx = document.getElementById("myChart").getContext("2d");
   var queueMaxLength = 10; // Độ dài tối đa của hàng đợi
@@ -56,8 +60,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Random giá trị cho nhiệt độ, độ ẩm và độ sáng
     var temperature = Math.floor(Math.random() * (40 - 20 + 1)) + 20;
+    document.getElementById("temperatureValue").innerHTML = temperature + "°C";
     var humidity = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+    document.getElementById("humidityValue").innerHTML = humidity + "%";
     var brightness = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+    document.getElementById("brightnessValue").innerHTML = brightness + "lux";
+    changeBackground(
+      temperatureCard,
+      temperature,
+      32,
+      22,
+      "linear-gradient(to bottom, #FF0000, #FFFF00)",
+      "linear-gradient(to bottom, #F0DE4D, #F0B64D)",
+      "linear-gradient(to bottom, #00FFFF, #0000FF)"
+    );
+    changeBackground(
+      humidityCard,
+      humidity,
+      80,
+      40,
+      "linear-gradient(to bottom, #075EAA, #010F79)",
+      "linear-gradient(to bottom, #4DCFF0, #0E30F0)",
+      "linear-gradient(to bottom, #4DCFF0, #4D9BF0)"
+    );
+    changeBackground(
+      brightnessCard,
+      brightness,
+      400,
+      100,
+      "linear-gradient(to bottom, #FBFF00, #FFE100)",
+      "linear-gradient(to bottom, #D9BF00, #FBFF00)",
+      "linear-gradient(to bottom, #D9BF00, #9B9E00)"
+    );
+
+    temperatureVl = temperature;
+    humidityVl = humidity;
+    brightnessVl = brightness;
 
     // Thêm dữ liệu mới vào hàng đợi
     queue.push({ time, temperature, humidity, brightness });
@@ -145,34 +183,6 @@ var humidityValue = parseInt(humidity.innerHTML);
 var brightnessCard = document.getElementById("brightnessCard");
 var brightness = document.getElementById("brightnessValue");
 var brightnessValue = parseInt(brightness.innerHTML);
-
-changeBackground(
-  temperatureCard,
-  temperatureValue,
-  32,
-  22,
-  "linear-gradient(to bottom, #FF0000, #FFFF00)",
-  "linear-gradient(to bottom, #F0DE4D, #F0B64D)",
-  "linear-gradient(to bottom, #00FFFF, #0000FF)"
-);
-changeBackground(
-  humidityCard,
-  humidityValue,
-  80,
-  40,
-  "linear-gradient(to bottom, #075EAA, #010F79)",
-  "linear-gradient(to bottom, #4DCFF0, #0E30F0)",
-  "linear-gradient(to bottom, #4DCFF0, #4D9BF0)"
-);
-changeBackground(
-  brightnessCard,
-  brightnessValue,
-  400,
-  100,
-  "linear-gradient(to bottom, #FBFF00, #FFE100)",
-  "linear-gradient(to bottom, #D9BF00, #FBFF00)",
-  "linear-gradient(to bottom, #D9BF00, #9B9E00)"
-);
 
 function changeBackground(
   box,

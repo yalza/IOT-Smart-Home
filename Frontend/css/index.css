@@ -71,11 +71,11 @@ nav button:hover {
   font-size: 2.5rem;
   font-weight: bold;
   background-color: white;
-  width: 35rem;
+  width: 30rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 10rem;
+  height: 9rem;
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -108,14 +108,14 @@ nav button:hover {
 
 .chart {
   width: 70%;
-  height: 60rem;
+  height: 40rem;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .action {
   width: 23%;
-  height: 60rem;
+  height: 40rem;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -126,9 +126,9 @@ nav button:hover {
 
 .light,
 .fan {
-  width: 25rem;
-  height: 25rem;
-  background: hsl(189, 84%, 80%);
+  width: 20rem;
+  height: 20rem;
+
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -137,7 +137,7 @@ nav button:hover {
 
 .light button,
 .fan button {
-  width: 15rem;
+  width: 10rem;
   padding: 1rem 0rem;
   font-size: 2.1rem;
   font-weight: bold;
@@ -148,7 +148,7 @@ nav button:hover {
 }
 
 .action img {
-  width: 15rem;
+  width: 10rem;
 }
 
 #myChart {

@@ -10,14 +10,14 @@
 }
 
 .profile-container img {
-  width: 50rem;
+  width: 40rem;
 }
 
 .information {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-size: 3.4rem;
+  font-size: 2rem;
 }
 
 .information p {
